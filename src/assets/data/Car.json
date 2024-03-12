@@ -1,0 +1,213 @@
+{
+    "jdm_cars": [
+      {
+        "id": 1,
+        "make": "Toyota",
+        "model": "Supra MKIV (A80)",
+        "year": 1998,
+        "engine": "2JZ-GTE",
+        "horsepower": 320,
+        "transmission": "6-speed manual",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/70/Toyota_Supra_RZ_%28JZA80%29_front.JPG",
+        "estimated_value_cad": 85000
+      },
+      {
+        "id": 2,
+        "make": "Nissan",
+        "model": "Skyline GT-R (BNR34)",
+        "year": 1999,
+        "engine": "RB26DETT",
+        "horsepower": 276,
+        "transmission": "6-speed manual",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Nissan_Skyline_GT-R_R34_V_Spec_II.jpg",
+        "estimated_value_cad": 125000
+      },
+      {
+        "id": 3,
+        "make": "Honda",
+        "model": "NSX (NA2)",
+        "year": 2005,
+        "engine": "C30A",
+        "horsepower": 276,
+        "transmission": "6-speed manual",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/NSX_%288208095694%29.jpg",
+        "estimated_value_cad": 105000
+      },
+      {
+        "id": 4,
+        "make": "Mitsubishi",
+        "model": "Lancer Evolution VI (CP9A)",
+        "year": 2001,
+        "engine": "4G63T",
+        "horsepower": 280,
+        "transmission": "5-speed manual",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/1999_Mitsubishi_Evo_VI_%282%29.jpg",
+        "estimated_value_cad": 45000
+      },
+      {
+        "id": 5,
+        "make": "Subaru",
+        "model": "Impreza WRX STI (GDB)",
+        "year": 2004,
+        "engine": "EJ20",
+        "horsepower": 280,
+        "transmission": "6-speed manual",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/06-07_Subaru_WRX_STI.jpg",
+        "estimated_value_cad": 40000
+      },
+      {
+        "id": 6,
+        "make": "Mazda",
+        "model": "RX-7 (FD3S)",
+        "year": 1997,
+        "engine": "13B-REW",
+        "horsepower": 276,
+        "transmission": "5-speed manual",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/1994_Mazda_RX-7_R2_in_Vintage_Red%2C_front_left_%28Lime_Rock%29.jpg",
+        "estimated_value_cad": 55000
+      },
+      {
+        "id": 7,
+        "make": "Mitsubishi",
+        "model": "3000GT VR-4 (Z15A)",
+        "year": 1999,
+        "engine": "6G72TT",
+        "horsepower": 320,
+        "transmission": "6-speed manual",
+        "image": "https://preview.redd.it/mitsubishi-3000gt-vr4-1920-1080-v0-tjmoufk1hq981.jpg?width=640&crop=smart&auto=webp&s=b0f2535a8a101d6006a32996db807ec9f3b5849b",
+        "estimated_value_cad": 30000
+      },
+      {
+        "id": 8,
+        "make": "Nissan",
+        "model": "Silvia (S14)",
+        "year": 1995,
+        "engine": "SR20DET",
+        "horsepower": 217,
+        "transmission": "5-speed manual",
+        "image": "https://preview.redd.it/whats-the-best-place-to-get-my-hands-on-a-lhd-silvia-s14-v0-x3h6kvsv3axb1.jpg?width=640&crop=smart&auto=webp&s=9bac590c746ece6165295a61c3080b0de5338d56",
+        "estimated_value_cad": 30000
+      },
+      {
+        "id": 9,
+        "make": "Toyota",
+        "model": "MR2 (SW20)",
+        "year": 1997,
+        "engine": "3S-GTE",
+        "horsepower": 245,
+        "transmission": "5-speed manual",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Toyota_MR2_G-Limited_%28SW20%29_front.JPG/1280px-Toyota_MR2_G-Limited_%28SW20%29_front.JPG",
+        "estimated_value_cad": 30000
+      },
+      {
+        "id": 10,
+        "make": "Subaru",
+        "model": "Legacy GT-B (BE5)",
+        "year": 2002,
+        "engine": "EJ20",
+        "horsepower": 280,
+        "transmission": "6-speed manual",
+        "image": "https://classicregister.com/sites/default/files/styles/col-7/public/20230813_030041693_iOS.jpg?itok=WEjuggEG",
+        "estimated_value_cad": 25000
+      },
+      {
+        "id": 11,
+        "make": "Honda",
+        "model": "Civic Type R (EK9)",
+        "year": 1999,
+        "engine": "B16B",
+        "horsepower": 182,
+        "transmission": "5-speed manual",
+        "image": "https://blog.way.com/wp-content/uploads/2024/02/Honda-Civic-EK9.jpg",
+        "estimated_value_cad": 45000
+      },
+      {
+        "id": 12,
+        "make": "Mazda",
+        "model": "MX-5 Miata (NA)",
+        "year": 1995,
+        "engine": "B6-ZE",
+        "horsepower": 130,
+        "transmission": "5-speed manual",
+        "image": "https://images.drive.com.au/caradvice/image/private/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/14593203b97aa68d6da09e25bb836672",
+        "estimated_value_cad": 20000
+      },
+      {
+        "id": 13,
+        "make": "Nissan",
+        "model": "Fairlady Z (Z32)",
+        "year": 2000,
+        "engine": "VQ35DE",
+        "horsepower": 276,
+        "transmission": "6-speed manual",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/RedZ32.jpg",
+        "estimated_value_cad": 30000
+      },
+      {
+        "id": 14,
+        "make": "Toyota",
+        "model": "Celica GT-Four (ST205)",
+        "year": 1998,
+        "engine": "3S-GTE",
+        "horsepower": 252,
+        "transmission": "6-speed manual",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/GT-FOUR_ST205.jpg",
+        "estimated_value_cad": 30000
+      },
+      {
+        "id": 15,
+        "make": "Honda",
+        "model": "Integra Type R (DC2)",
+        "year": 2001,
+        "engine": "B18C",
+        "horsepower": 197,
+        "transmission": "5-speed manual",
+        "image": "https://images.squarespace-cdn.com/content/v1/5caed8960cf57d49530e8c60/2266ea73-d99a-49aa-a838-ef8820f0d2cf/art-mg-hondaintegratyperdc2k.jpg?format=2500w",
+        "estimated_value_cad": 40000
+      },
+      {
+        "id": 16,
+        "make": "Subaru",
+        "model": "Forester STI (SG9)",
+        "year": 2005,
+        "engine": "EJ25",
+        "horsepower": 320,
+        "transmission": "6-speed manual",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Subaru_Forester_STI_%282%29.jpg/2560px-Subaru_Forester_STI_%282%29.jpg",
+        "estimated_value_cad": 45000
+      },
+      {
+        "id": 17,
+        "make": "Mitsubishi",
+        "model": "Galant VR-4 (E39A)",
+        "year": 1991,
+        "engine": "4G63T",
+        "horsepower": 237,
+        "transmission": "5-speed manual",
+        "image": "https://s3.us-east-2.amazonaws.com/prod.mm.com/cache/a7/fb/a7fb12ebb4e5edee2886c24d1504ddbb.jpg",
+        "estimated_value_cad": 25000
+      },
+      {
+        "id": 18,
+        "make": "Nissan",
+        "model": "Pulsar GTI-R (RNN14)",
+        "year": 1997,
+        "engine": "SR20DET",
+        "horsepower": 227,
+        "transmission": "5-speed manual",
+        "image": "https://www.carfarm.com.hk/wp-content/uploads/2023/12/Nissan-Pulsar-GTI-R-Black-SE37-upcoming-01.jpg",
+        "estimated_value_cad": 30000
+      },
+      {
+        "id": 19,
+        "make": "Toyota",
+        "model": "Chaser (JZX100)",
+        "year": 1996,
+        "engine": "2JZ-GTE",
+        "horsepower": 276,
+        "transmission": "5-speed manual",
+        "image": "https://cdn.dealeraccelerate.com/driver/1/335/13429/1920x1440/1996-toyota-chaser-tourer-v-jzx100",
+        "estimated_value_cad": 25000
+      }
+    ]
+  }

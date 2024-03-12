@@ -7,6 +7,7 @@ import NotFound from "./assets/page/NotFound";
 import Home from "./assets/page/Home";
 import AddProduct from "./assets/page/AddProduct";
 import Favorites from "./assets/page/Favorites";
+import ProductDetails from "./assets/page/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -19,12 +20,16 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/product",
-        element: <AddProduct />,
+        path: "/product/:id",
+        element: <ProductDetails />,
       },
       {
         path: "/favorites",
         element: <Favorites />,
+      },
+      {
+        path: "/product",
+        element: <AddProduct />,
       },
     ],
   },

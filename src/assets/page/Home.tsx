@@ -1,6 +1,6 @@
 import "./Home.css";
 import products from "../data/Car.json";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Home = () => {
   const productsArray = products.jdm_cars;
@@ -10,7 +10,7 @@ const Home = () => {
       <div className="cardContainer">
         {productsArray.map((product) => (
           <div className="card">
-            <Link to={"/product/:" + product.id} className="imageContainer">
+            <Link to={"/product/:id" + product.id} className="imageContainer">
               <img className="image" src={product.image}></img>
             </Link>
             <div className="info">

@@ -1,0 +1,54 @@
+form {
+    margin: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 50px;
+
+  }
+  .input-field {
+    position: relative;
+    width: 45%;
+    height: 44px;
+    line-height: 44px;
+    flex-shrink: 0;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #7b7b7b;
+    transition: 0.2s all;
+    cursor: text;
+  }
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #7b7b7b;
+    box-shadow: none;
+    color: #111;
+  }
+  input:focus {
+    border-color: #006fee;
+  }
+  input:focus~label {
+    font-size: 14px;
+    top: -24px;
+    color: #006fee;
+  }
+  
+  .image-link {
+    width: 100%;
+  }
+
+  input[type=submit]:hover {
+    background-color: #006fee;
+  }
+
+  .header-contaner{
+    width: 100%;
+  }

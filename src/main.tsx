@@ -8,6 +8,7 @@ import Home from "./assets/page/Home";
 import AddProduct from "./assets/page/AddProduct";
 import Favorites from "./assets/page/Favorites";
 import ProductDetails from "./assets/page/ProductDetails";
+import FakeHome from "./assets/page/FakeHome";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/product",
         element: <AddProduct />,
+      },
+      {
+        path: "/Home2",
+        element: <FakeHome />,
       },
     ],
   },

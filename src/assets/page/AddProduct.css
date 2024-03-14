@@ -22,6 +22,7 @@ form {
     color: #7b7b7b;
     transition: 0.2s all;
     cursor: text;
+    font-size: 18px;
   }
   input {
     width: 100%;
@@ -30,17 +31,34 @@ form {
     padding: 0.5rem 0;
     border-bottom: 2px solid #7b7b7b;
     box-shadow: none;
-    color: #111;
+    color: #7b7b7b;
   }
-  input:focus {
+
+  input:focus{
     border-color: #006fee;
   }
-  input:focus~label {
+
+  input:focus~label,
+  input:valid~label {
     font-size: 14px;
     top: -24px;
     color: #006fee;
   }
-  
+
+  input:not(:placeholder-shown)~label,
+  input:focus~label {
+    font-size: 14px;
+    top: -24px;
+  }
+
+  input:not(:placeholder-shown):invalid{
+    border-color: red;
+  }
+
+  input:not(:placeholder-shown):invalid~label{
+    color: red;
+  }
+
   .image-link {
     width: 100%;
   }
@@ -52,3 +70,29 @@ form {
   .header-contaner{
     width: 100%;
   }
+
+  .requirement-message {
+    color: red;
+  }
+
+  input:invalid:not(:focus).num {
+    color: #ffffff00;
+  }
+
+  input:not(:focus).num~label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #7b7b7b;
+    transition: 0.2s all;
+    cursor: text;
+    font-size: 18px;
+  }
+
+  input:valid.num~label {
+    font-size: 14px;
+    top: -24px;
+  }
+
+

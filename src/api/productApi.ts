@@ -1,12 +1,18 @@
 import axios from "axios";
 
-const ProductAPIEndPoint = "https://fakestoreapi.com/products";
+const PRODUCT_ENDPOINT =import.meta.env.VITE_BASE_URL;
 
 //Get all products
-export const getAllProducts = () => axios.get("https://fakestoreapi.com/products");
+export const getAllProducts = () => axios.get(PRODUCT_ENDPOINT);
 
 //Create new product
 interface ProductType {
-    name: string;
+    make: string;
+    model: string;
+    year: number;
+    engine: string;
+    transmission: string;
+    price: number;
+    link: string;
 }
-export const createProduct = (productData: ProductType) => axios.post("https://fakestoreapi.com/products", productData);
+export const createProduct = (productData: ProductType) => axios.post(PRODUCT_ENDPOINT, productData);

@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import { RatingType } from "../types/products";
-import "./Card2.css";
+import "./Card.css";
 
 interface ProductCardProps {
   image: string;
@@ -8,6 +9,7 @@ interface ProductCardProps {
   price: number;
   category: string;
   rating: RatingType;
+  link: string;
 }
 
 export default function Card2({
@@ -16,17 +18,17 @@ export default function Card2({
   price,
   category,
   rating,
+  link,
 }: ProductCardProps) {
   return (
     <div className="card">
-      <div className="imageContainer">
+      <Link to={link} className="imageContainer">
         <img className="image" src={image} alt={title} />
-      </div>
+      </Link>
       <div className="info">
         <div className="box">
           <h1 className="modelName">{title}</h1>
         </div>
-        <p>{category}</p>
         <p className="value">
           {new Intl.NumberFormat("en-US", {
             currency: "CAD",

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Card2.css";
+import "./Card.css";
 
 interface CarCardProps {
   make: string;

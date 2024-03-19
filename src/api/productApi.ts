@@ -9,10 +9,16 @@ export const getAllProducts = () => axios.get(PRODUCT_ENDPOINT);
 interface ProductType {
     make: string;
     model: string;
-    year: number;
+    year?: number;
     engine: string;
     transmission: string;
-    price: number;
+    price?: number;
     link: string;
 }
 export const createProduct = (productData: ProductType) => axios.post(PRODUCT_ENDPOINT, productData);
+
+//Get one product
+export const getProductByID = (id: string) => axios.get(`${PRODUCT_ENDPOINT}/${id}`);
+
+// Delete a product
+export const deleteProduct = (id: string) => axios.delete(`${PRODUCT_ENDPOINT}/${id}`);

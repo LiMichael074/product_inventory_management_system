@@ -18,7 +18,7 @@ const Home = () => {
             transmission={product.transmission}
             image={product.image}
             estimated_value_cad={product.estimated_value_cad}
-            link={"/product/:id" + product.id}
+            link={"/product/" + product.id}
           />
         ))}
       </div>

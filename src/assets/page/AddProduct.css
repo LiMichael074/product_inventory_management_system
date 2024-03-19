@@ -74,7 +74,7 @@ form {
   .requirement-message {
     color: red;
   }
-
+/* 
   input:invalid:not(:focus).num {
     color: #ffffff00;
   }
@@ -93,6 +93,6 @@ form {
   input:valid.num~label {
     font-size: 14px;
     top: -24px;
-  }
+  } */
 
 

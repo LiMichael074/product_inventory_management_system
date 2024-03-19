@@ -3,12 +3,10 @@ import "./ProductDerails.css";
 import products from "../data/Car.json";
 
 const ProductDetails = () => {
-  const { id } = useParams();
-  const slicedId = id ? id.slice(3) : "";
+  const { id = "" } = useParams();
+  // const slicedId = id ? id.slice(3) : "";
   const productsArray = products.jdm_cars;
-  const product = productsArray.find(
-    (product) => product.id === parseInt(slicedId)
-  );
+  const product = productsArray.find((product) => product.id === parseInt(id));
   return (
     <>
       <div className="container">

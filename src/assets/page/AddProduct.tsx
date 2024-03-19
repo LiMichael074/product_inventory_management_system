@@ -8,10 +8,10 @@ const AddProduct = () => {
     initialValues: {
       make: "",
       model: "",
-      year: 0,
+      year: undefined,
       engine: "",
       transmission: "",
-      price: 0,
+      price: undefined,
       link: "",
     },
     validationSchema: Yup.object({
@@ -109,7 +109,7 @@ const AddProduct = () => {
             onBlur={formik.handleBlur}
             value={formik.values.year}
             required
-            pattern="^\d\d\d\d$"
+            pattern="^[1-9][0-9][0-9][0-9]$"
             placeholder=" "
           ></input>
           {formik.touched.year && formik.errors.year ? (
@@ -158,7 +158,7 @@ const AddProduct = () => {
 
         <div className="input-field">
           <input
-            type="text"
+            type="nume"
             id="estimated_value_cad"
             name="estimated_value_cad"
             className="num"
@@ -183,7 +183,7 @@ const AddProduct = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.link}
-            // required
+            required
             // pattern="^\d\d\d\d$"
             placeholder=" "
           ></input>

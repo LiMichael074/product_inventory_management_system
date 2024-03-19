@@ -9,6 +9,7 @@ import AddProduct from "./assets/page/AddProduct";
 import Favorites from "./assets/page/Favorites";
 import ProductDetails from "./assets/page/ProductDetails";
 import FakeHome from "./assets/page/FakeHome";
+import ProductDetails2 from "./assets/page/ProductDetails2";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/Home2",
         element: <FakeHome />,
+      },
+      {
+        path: "/product2/:id",
+        element: <ProductDetails2 />,
       },
     ],
   },

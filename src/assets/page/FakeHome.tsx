@@ -28,6 +28,7 @@ const FakeHome = () => {
           price={product.price}
           category={product.category}
           rating={product.rating}
+          link={"/product2/" + product.id}
         />
       ))}
     </div>

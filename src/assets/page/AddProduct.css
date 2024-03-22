@@ -5,8 +5,16 @@ form {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 50px;
+    
 
   }
+
+  input[type=text],[type=number],[type=url] {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 18px;
+  }
+
   .input-field {
     position: relative;
     width: 45%;
@@ -19,7 +27,7 @@ form {
     top: 0;
     left: 0;
     width: 100%;
-    color: #7b7b7b;
+    color: #ffffff;
     transition: 0.2s all;
     cursor: text;
     font-size: 18px;
@@ -35,14 +43,14 @@ form {
   }
 
   input:focus{
-    border-color: #006fee;
+    border-color: #ffcc00;
   }
 
   input:focus~label,
   input:valid~label {
     font-size: 14px;
     top: -24px;
-    color: #006fee;
+    color: #ffcc00;
   }
 
   input:not(:placeholder-shown)~label,
@@ -51,20 +59,20 @@ form {
     top: -24px;
   }
 
-  input:not(:placeholder-shown):invalid{
+  /* input:not(:placeholder-shown):invalid{
     border-color: red;
   }
 
   input:not(:placeholder-shown):invalid~label{
     color: red;
-  }
+  } */
 
   .image-link {
     width: 100%;
   }
 
   input[type=submit]:hover {
-    background-color: #006fee;
+    background-color: #ffcc00;
   }
 
   .header-contaner{

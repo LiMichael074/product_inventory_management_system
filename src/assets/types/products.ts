@@ -1,7 +1,9 @@
 export interface ProductType {
     id?: number;
     title: string;
-    price: number;
+    
+estimated_value_cad
+: number;
     description: string;
     category: string;
     image: string;

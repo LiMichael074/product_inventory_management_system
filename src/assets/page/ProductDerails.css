@@ -1,8 +1,85 @@
 .container {
     display: flex;
     flex-direction: row;
+    padding: 20px;
+    justify-content: space-evenly;
 }
 
-.image {
-    width: 50%;
+.image_container{
+    width: 60%;
+    padding-right: 20px;
+}
+
+.image_detail {
+    width: 100%;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #ffce08;
+    border-width: 3px;
+    object-fit: contain;
+}
+
+.information_container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.301);
+    border-radius: 10px;
+}
+
+
+.detail_text {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: rgb(25, 39, 57);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.bottom_border {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.164);
+}
+
+.model {
+    color: #ffce08;
+    text-align: center;
+}
+
+p {
+    font-size: large;
+}
+
+.text_right {
+    text-align: right;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.same_line_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.delet {
+    padding-top: 50px;
+}
+
+.delet_text {
+    color: #c10000;
+}
+
+.delet_button {
+    transition: 0.5s;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #c10000;
+    font-weight:bold;
+    background-color: rgb(205, 205, 205);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delet_button:hover {
+    color: rgb(205, 205, 205);
+    background-color: #c10000;
 }

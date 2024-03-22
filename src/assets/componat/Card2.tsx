@@ -6,7 +6,8 @@ interface ProductCardProps {
   image: string;
   title: string;
   description: string;
-  price: number;
+
+  estimated_value_cad: number;
   category: string;
   rating: RatingType;
   link: string;
@@ -15,7 +16,8 @@ interface ProductCardProps {
 export default function Card2({
   image,
   title,
-  price,
+
+  estimated_value_cad,
   category,
   rating,
   link,
@@ -33,7 +35,7 @@ export default function Card2({
           {new Intl.NumberFormat("en-US", {
             currency: "CAD",
             style: "currency",
-          }).format(price)}
+          }).format(estimated_value_cad)}
         </p>
         <p>
           Ratings: {rating.count} {rating.rate}

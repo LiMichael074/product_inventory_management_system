@@ -1,10 +1,11 @@
 export interface CarsType {
-    id?: number;
+    _id: string,
     make: string,
     model: string,
-    year?: number,
+    year: number,
     engine: string,
+    horsepower:number,
     transmission: string,
     image: string,
-    estimated_value_cad?: number
+    estimated_value_cad: number
 }

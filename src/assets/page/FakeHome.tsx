@@ -25,7 +25,7 @@ const FakeHome = () => {
           image={product.image}
           title={product.title}
           description={product.description}
-          price={product.price}
+          estimated_value_cad={product.estimated_value_cad}
           category={product.category}
           rating={product.rating}
           link={"/product2/" + product.id}

@@ -6,16 +6,17 @@ const PRODUCT_ENDPOINT =import.meta.env.VITE_BASE_URL;
 export const getAllProducts = () => axios.get(PRODUCT_ENDPOINT);
 
 //Create new product
-interface ProductType {
+interface CarsType {
     make: string;
     model: string;
     year?: number;
     engine: string;
+    horsepower?: number;
     transmission: string;
-    price?: number;
-    link: string;
+    estimated_value_cad?: number;
+    image: string;
 }
-export const createProduct = (productData: ProductType) => axios.post(PRODUCT_ENDPOINT, productData);
+export const createProduct = (carData: CarsType) => axios.post(PRODUCT_ENDPOINT, carData);
 
 //Get one product
 export const getProductByID = (id: string) => axios.get(`${PRODUCT_ENDPOINT}/${id}`);

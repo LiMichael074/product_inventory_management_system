@@ -10,20 +10,21 @@ const AddProduct = () => {
       model: "",
       year: undefined,
       engine: "",
+      horsepower: undefined,
       transmission: "",
-      price: undefined,
-      link: "",
+      estimated_value_cad: undefined,
+      image: "",
     },
     validationSchema: Yup.object({
       make: Yup.string()
         .matches(
-          /^(?:[a-zA-Z0-9]+(?:\s|-|\(\))?)+$/,
+          /^(?!.*\s{2,})[A-Za-z0-9() -]+$/,
           "Must be letters, dashes, numbers, spaces or the forllowing special characters: - ()"
         )
         .required("Required"),
       model: Yup.string()
         .matches(
-          /^(?:[a-zA-Z0-9]+(?:\s|-|\(\))?)+$/,
+          /^(?!.*\s{2,})[A-Za-z0-9() -]+$/,
           "Must be letters, dashes, numbers, spaces or the forllowing special characters: - ()"
         )
         .required("Required"),
@@ -32,20 +33,26 @@ const AddProduct = () => {
         .required("Required"),
       engine: Yup.string()
         .matches(
-          /^(?:[a-zA-Z0-9]+(?:\s|-|\(\))?)+$/,
+          /^(?!.*\s{2,})[A-Za-z0-9() -]+$/,
           "Must be letters, dashes, numbers, spaces or the forllowing special characters: - ()"
         )
+        .required("Required"),
+      horsepower: Yup.number()
+        .min(0, "Horsepower must be above 0")
         .required("Required"),
       transmission: Yup.string()
         .matches(
-          /^(?:[a-zA-Z0-9]+(?:\s|-|\(\))?)+$/,
+          /^(?!.*\s{2,})[A-Za-z0-9() -]+$/,
           "Must be letters, dashes, numbers, spaces or the forllowing special characters: - ()"
         )
         .required("Required"),
-      price: Yup.number().min(0, "Price must be above 0").required("Required"),
-      link: Yup.string().url("Must be a valid URL"),
+      estimated_value_cad: Yup.number()
+        .min(0, "estimated_value_cad must be above 0")
+        .required("Required"),
+      image: Yup.string().url("Must be a valid URL"),
     }),
     onSubmit: async (values, { resetForm }) => {
+      console.log("Submitted values:", values);
       try {
         const response = await createProduct(values);
         console.log("Product added successfully", response.data);
@@ -58,11 +65,10 @@ const AddProduct = () => {
   });
   return (
     <>
+      <div className="header-contaner">
+        <h1>Add Product</h1>
+      </div>
       <form action="#" method="post" onSubmit={formik.handleSubmit}>
-        <div className="header-contaner">
-          <h1>Add Product</h1>
-        </div>
-
         <div className="input-field">
           <input
             type="text"
@@ -72,7 +78,7 @@ const AddProduct = () => {
             onBlur={formik.handleBlur}
             value={formik.values.make}
             required
-            pattern="^(?:[a-zA-Z0-9]+(?:\s|-|\(\))?)+$"
+            pattern="^(?!.*\s{2,})[A-Za-z0-9() -]+$"
             placeholder=" "
           ></input>
           {formik.touched.make && formik.errors.make ? (
@@ -90,7 +96,7 @@ const AddProduct = () => {
             onBlur={formik.handleBlur}
             value={formik.values.model}
             required
-            pattern="^(?:[a-zA-Z0-9]+(?:\s|-|\(\))?)+$"
+            pattern="^(?!.*\s{2,})[A-Za-z0-9() -]+$"
             placeholder=" "
           ></input>
           {formik.touched.model && formik.errors.model ? (
@@ -127,13 +133,34 @@ const AddProduct = () => {
             onBlur={formik.handleBlur}
             value={formik.values.engine}
             required
-            pattern="^(?:[a-zA-Z0-9]+(?:\s|-|\(\))?)+$"
+            pattern="^(?!.*\s{2,})[A-Za-z0-9() -]+$"
             placeholder=" "
           ></input>
           {formik.touched.engine && formik.errors.engine ? (
             <div className="requirement-message">{formik.errors.engine}</div>
           ) : null}
           <label htmlFor="engine">Engine Name:</label>
+        </div>
+
+        <div className="input-field">
+          <input
+            type="number"
+            id="horsepower"
+            name="horsepower"
+            className="num"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.horsepower}
+            required
+            pattern="^\d*$"
+            placeholder=" "
+          ></input>
+          {formik.touched.horsepower && formik.errors.horsepower ? (
+            <div className="requirement-message">
+              {formik.errors.horsepower}
+            </div>
+          ) : null}
+          <label htmlFor="horsepower">Horsepower:</label>
         </div>
 
         <div className="input-field">
@@ -145,7 +172,7 @@ const AddProduct = () => {
             onBlur={formik.handleBlur}
             value={formik.values.transmission}
             required
-            pattern="^(?:[a-zA-Z0-9]+(?:\s|-|\(\))?)+$"
+            pattern="^(?!.*\s{2,})[A-Za-z0-9() -]+$"
             placeholder=" "
           ></input>
           {formik.touched.transmission && formik.errors.transmission ? (
@@ -158,19 +185,22 @@ const AddProduct = () => {
 
         <div className="input-field">
           <input
-            type="nume"
+            type="number"
             id="estimated_value_cad"
             name="estimated_value_cad"
             className="num"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.price}
+            value={formik.values.estimated_value_cad}
             required
             pattern="^\d*$"
             placeholder=" "
           ></input>
-          {formik.touched.price && formik.errors.price ? (
-            <div className="requirement-message">{formik.errors.price}</div>
+          {formik.touched.estimated_value_cad &&
+          formik.errors.estimated_value_cad ? (
+            <div className="requirement-message">
+              {formik.errors.estimated_value_cad}
+            </div>
           ) : null}
           <label htmlFor="estimated_value_cad">Price:</label>
         </div>
@@ -179,16 +209,15 @@ const AddProduct = () => {
           <input
             type="url"
             id="image"
-            name="link"
+            name="image"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.link}
+            value={formik.values.image}
             required
-            // pattern="^\d\d\d\d$"
             placeholder=" "
           ></input>
-          {formik.touched.link && formik.errors.link ? (
-            <div className="requirement-message">{formik.errors.link}</div>
+          {formik.touched.image && formik.errors.image ? (
+            <div className="requirement-message">{formik.errors.image}</div>
           ) : null}
           <label htmlFor="image">Image Link:</label>
         </div>

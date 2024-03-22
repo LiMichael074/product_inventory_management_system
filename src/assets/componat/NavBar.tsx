@@ -12,11 +12,18 @@ const NevBarContainer = styled.header`
   color: white;
 `;
 
+const Title = styled.h1`
+  font-family: "Impact", fantasy;
+  color: #ffcc00;
+  font-weight: 100;
+  letter-spacing: 5px;
+`;
+
 const NavBar = () => {
   return (
     <>
       <NevBarContainer>
-        <h1>Mick Dearlership</h1>
+        <Title>Mick Dearlership</Title>
         <DropdownMenu />
       </NevBarContainer>
       <Outlet />

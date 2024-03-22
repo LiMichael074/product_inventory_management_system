@@ -18,7 +18,7 @@ export default function Card2({
   title,
 
   estimated_value_cad,
-  category,
+  //category,
   rating,
   link,
 }: ProductCardProps) {

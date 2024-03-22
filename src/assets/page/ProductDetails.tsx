@@ -1,4 +1,4 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./ProductDerails.css";
 import { useEffect, useState } from "react";
 import { CarsType } from "../types/Cars";

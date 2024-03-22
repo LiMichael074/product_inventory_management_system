@@ -18,8 +18,8 @@ export default function Card({
   make,
   model,
   year,
-  engine,
-  transmission,
+  //engine,
+  //transmission,
   image,
   estimated_value_cad,
 }: CarCardProps) {
